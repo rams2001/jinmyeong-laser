@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>진명레이져 | 인천 레이저 마킹</title>
+<meta name="description" content="인천 주안동 레이저 마킹 전문 진명레이져. 금속·자동차·전자·휴대폰 부품 마킹, 아노다이징·도장 제거, 글씨·문양·로고 마킹.">
+<script>document.documentElement.className="js"</script>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+*{box-sizing:border-box;margin:0}
+:root{--ink:#15181c;--mute:#667079;--blue:#5f7d9c;--soft:#f3f5f7;--line:#dde1e6}
+body{display:flex;flex-direction:column;min-height:100svh;font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:#fff;line-height:1.7;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+header{position:fixed;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,64px);background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:9}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.03em}
+.logo img{display:block;height:26px;width:auto}
+nav{display:flex;gap:32px;font-size:15px;font-weight:500}
+nav a:hover{color:var(--blue)}
+body:has(#about:target) nav a[href="#about"],body:has(#project:target) nav a[href="#project"],body:has(#equipment:target) nav a[href="#equipment"],body:has(#company:target) nav a[href="#company"],body:has(#contact:target) nav a[href="#contact"]{color:var(--blue);font-weight:700}
+.page{display:none}
+.page:target{display:block}
+main:not(:has(.page:target)) #home,#home:target{display:flex}
+@supports not selector(:has(*)){.page{display:block}#home{display:flex}}
+main{flex:1;display:flex;flex-direction:column}
+main>.page{flex:1}
+section{padding:clamp(72px,12vw,150px) clamp(20px,5vw,64px)}
+.w{max-width:1120px;margin:auto}
+h2{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.035em;line-height:1.25;margin-bottom:36px}
+p{color:var(--mute);max-width:640px}
+p+p{margin-top:16px}
+.soft{background:var(--soft)}
+/* 홈 슬라이드: 사진은 index.html과 같은 곳에 hero1.jpg, hero2.jpg, hero3.jpg 이름으로 올리면 자동 적용됩니다 */
+.hero{position:relative;width:100%;min-height:560px;overflow:hidden;background:#eef2f6}
+.slide{position:absolute;inset:0;display:flex;align-items:center;padding:96px clamp(20px,5vw,64px);isolation:isolate;opacity:0;visibility:hidden;animation:sl 19.5s infinite}
+.s1{animation-name:sl1}.s2{animation-delay:6.5s}.s3{animation-delay:13s}
+@keyframes sl{0%{opacity:0;visibility:visible}4%{opacity:1}31%{opacity:1}35%{opacity:0;visibility:visible}35.1%,100%{opacity:0;visibility:hidden}}
+@keyframes sl1{0%{opacity:1;visibility:visible}31%{opacity:1}35%{opacity:0;visibility:visible}35.1%,100%{opacity:0;visibility:hidden}}
+.slide::before{content:"";position:absolute;inset:0;z-index:-1;background-size:cover;background-position:center}
+.s1::before{background-image:linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)),url(hero1.jpg),linear-gradient(135deg,#f5f7f9,#d6dfe8)}
+.s2::before{background-image:linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)),url(hero2.jpg),linear-gradient(135deg,#eef2f6,#c9d5e1)}
+.s3::before{background-image:linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)),url(hero3.jpg),linear-gradient(135deg,#f6f7f8,#dde3ea)}
+.slide .in{animation:rise 19.5s infinite;animation-delay:inherit}
+@keyframes rise{0%,6%{opacity:0;transform:translateY(24px)}12%{opacity:1;transform:none}31%{opacity:1}35%,100%{opacity:0}}
+.hd{font-size:clamp(34px,5.8vw,78px);font-weight:800;letter-spacing:-.05em;line-height:1.12;margin:0}
+.hd span{display:block;color:var(--blue)}
+.sub{font-size:clamp(16px,2vw,20px);color:var(--ink);margin-top:28px}
+.btns{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{padding:14px 28px;border:1.5px solid var(--ink);font-weight:600}
+.btn.p{background:var(--ink);color:#fff}
+.btn:hover{border-color:var(--blue);background:var(--blue);color:#fff}
+.ln{font-size:clamp(24px,4.2vw,52px);font-weight:700;letter-spacing:-.03em;line-height:1.4;color:var(--ink);margin-bottom:.9em;transition:color .7s;max-width:900px}
+.js .ln{color:#c3cad2}
+.js .ln.on{color:var(--ink)}
+.ln .w2{display:inline-block;transition:color .25s,transform .25s}
+.ln.on .w2:hover{color:var(--blue);transform:translateY(-4px)}
+.ln.xl{font-size:clamp(32px,6vw,76px);font-weight:800;line-height:1.2;margin-bottom:.8em}
+.ln.l{font-size:clamp(22px,3.4vw,40px);font-weight:800;line-height:1.4;margin-bottom:.5em}
+.ln.m{font-size:clamp(18px,2.2vw,26px);font-weight:600;line-height:1.75;margin:1.4em 0}
+.two{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(24px,6vw,96px)}
+.two h2{margin:0}
+.kind{margin-top:32px;padding-left:20px;border-left:3px solid var(--blue);color:var(--ink);font-weight:700;font-size:clamp(18px,2vw,22px);max-width:640px}
+.row{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(24px,6vw,96px);padding:32px 0;border-top:1px solid var(--line)}
+.row h3{font-size:22px;letter-spacing:-.02em}
+.area{margin-top:48px;padding-left:20px;border-left:3px solid var(--blue);color:var(--ink);font-weight:600;font-size:18px}
+.area small{display:block;color:var(--mute);font-weight:400;font-size:15px}
+ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+ol li{border-top:3px solid var(--ink);padding-top:16px}
+ol b{display:block;font-size:20px;letter-spacing:-.02em}
+ol span{color:var(--mute);font-size:15px}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ph{aspect-ratio:4/3;background:#fff;border:1px dashed #b9c1c9;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--mute);font-size:15px}
+.ph b{color:var(--ink);font-size:17px}
+.eq{font-size:clamp(40px,7vw,88px);font-weight:800;letter-spacing:-.04em;line-height:1.1}
+.eq small{display:block;font-size:clamp(16px,2vw,22px);font-weight:500;letter-spacing:0;color:var(--blue);margin-top:12px}
+.dx{margin-top:40px;padding-left:20px;border-left:3px solid var(--blue)}
+.dx h3{font-size:20px;letter-spacing:-.02em;margin-bottom:8px}
+.dx p{max-width:none}
+.map{width:100%;height:clamp(300px,45vw,460px);border:0;filter:grayscale(.25)}
+.addr{margin-top:28px;font-size:18px;color:var(--ink)}
+.addr a{color:var(--blue);font-weight:600;margin-right:16px;font-size:16px}
+.big{display:block;font-size:clamp(28px,5vw,56px);font-weight:800;letter-spacing:-.03em;line-height:1.3;word-break:break-all}
+.big:hover{color:var(--blue)}
+.big small{display:block;font-size:15px;font-weight:500;color:var(--mute);letter-spacing:0}
+.big+.big{margin-top:32px}
+.slide::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(rgba(95,125,156,.22) 1.2px,transparent 1.5px) 0 0/28px 28px;-webkit-mask-image:linear-gradient(90deg,transparent 35%,#000);mask-image:linear-gradient(90deg,transparent 35%,#000)}
+.deco{position:absolute;right:clamp(20px,6vw,96px);top:50%;width:min(28vw,360px);transform:translateY(-50%) rotate(-3deg);z-index:1;pointer-events:none;filter:drop-shadow(0 24px 30px rgba(40,60,80,.18))}
+.mk{font:800 92px Pretendard,sans-serif;fill:var(--blue);fill-opacity:0;stroke:var(--blue);stroke-width:1.6;stroke-dasharray:1800;stroke-dashoffset:1800;animation:etch 3.2s .6s ease forwards,fillin 1s 3.4s forwards}
+.beam{fill:var(--blue);filter:drop-shadow(0 0 4px var(--blue));animation:scan 3.6s ease-in-out infinite alternate}
+@keyframes etch{to{stroke-dashoffset:0}}
+@keyframes fillin{to{fill-opacity:.14}}
+@keyframes scan{from{transform:translateY(8px)}to{transform:translateY(230px)}}
+@media(min-width:901px){.slide .in{max-width:66%}}
+@media(max-width:900px){.deco{display:none}}
+.pi{display:block;width:44px;height:44px;margin-bottom:14px;fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin}
+.card{flex:0 0 clamp(240px,28vw,340px);scroll-snap-align:start}
+.card span{display:block;margin-top:10px;font-weight:600}
+.rn{display:flex;gap:10px;margin-top:20px}
+.rn button{width:48px;height:48px;border:1.5px solid var(--ink);background:#fff;font-size:22px;cursor:pointer;color:var(--ink)}
+.rn button:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.cc{display:block;padding:32px 28px;border:1px solid var(--line);background:#fff;transition:transform .25s,border-color .25s}
+.cc:hover{transform:translateY(-4px);border-color:var(--blue)}
+.cc .pi{margin-bottom:20px}
+.cc small{display:block;color:var(--mute);font-size:14px}
+.cc b{display:block;font-size:clamp(18px,2vw,22px);font-weight:800;letter-spacing:-.02em;line-height:1.4;word-break:break-all}
+.cc em{display:block;margin-top:6px;font-style:normal;color:var(--blue);font-size:14px;font-weight:600}
+.need{margin-top:48px;padding:32px;background:var(--soft)}
+.need h3{font-size:20px;letter-spacing:-.02em;margin-bottom:16px}
+.need ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.need li{padding:8px 18px;background:#fff;border:1px solid var(--line);font-weight:600}
+@media(prefers-reduced-motion:reduce){.mk{animation:none;stroke-dashoffset:0;fill-opacity:.14}.beam{animation:none}}
+.shot{position:relative;margin-top:48px}
+.shot img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.pin{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--blue);border:3px solid #fff;animation:pulse 2s infinite}
+.tag{position:absolute;transform:translate(18px,-50%);padding:2px 10px;background:#fff;border:1px solid var(--line);font-size:13px;white-space:nowrap}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(95,125,156,.7)}100%{box-shadow:0 0 0 22px rgba(95,125,156,0)}}
+.eqimg{display:block;width:100%;height:auto;margin-top:40px}
+footer{display:flex;flex-wrap:wrap;align-items:center;gap:4px 20px;padding:20px clamp(20px,5vw,64px);border-top:1px solid var(--line);background:#fff;color:var(--mute);font-size:13px;line-height:1.6}
+footer b{color:var(--ink);font-weight:700}
+footer a:hover{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+@media(max-width:760px){
+header{height:auto;flex-direction:column;align-items:flex-start;gap:0;padding:8px 20px 0}
+nav{gap:20px;font-size:14px;width:100%;overflow-x:auto}
+nav a{padding:8px 0;white-space:nowrap}
+.slide{padding-top:128px}
+.page>section:first-child{padding-top:120px}
+.two,.row{grid-template-columns:1fr;gap:16px}.two h2{margin-bottom:8px}
+ol{grid-template-columns:1fr 1fr}.g{grid-template-columns:1fr 1fr}.cg{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.slide{animation:none}.s1{opacity:1;visibility:visible}.slide .in{animation:none;opacity:1}.ln,.ln .w2{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#home"><img src="logo.png" alt="JML 로고"><span>진명레이져</span></a>
+  <nav id="nav">
+    <a href="#about">About</a>
+    <a href="#project">Project</a>
+    <a href="#equipment">Equipment</a>
+    <a href="#company">Company</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<div class="page" id="home">
+  <div class="hero" id="hero">
+    <div class="slide s1">
+      <div class="in">
+        <h1 class="hd">진심으로 시작하고,<span>신뢰로 기억되는 이름.</span></h1>
+        <p class="sub">금속·자동차·전자·휴대폰 부품 레이저 마킹, 진명레이져</p>
+      </div>
+    </div>
+    <div class="slide s2">
+      <div class="in">
+        <h2 class="hd">작지만 중요한 일,<span>정성껏 담당합니다.</span></h2>
+        <p class="sub">맡겨주신 부품이 의도하신 그대로 나오도록 최선을 다하겠습니다.</p>
+      </div>
+    </div>
+    <div class="slide s3">
+      <div class="in">
+        <h2 class="hd">처음이셔도 괜찮습니다.<span>친절히 안내드립니다.</span></h2>
+        <p class="sub">소재와 사이즈만 알려주시면 상담부터 샘플 테스트까지 함께합니다.</p>
+      </div>
+    </div>
+    <svg class="deco" viewBox="0 0 320 240" aria-hidden="true">
+      <defs><linearGradient id="mp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6f8"/><stop offset="1" stop-color="#cbd5df"/></linearGradient><clipPath id="cp"><rect x="8" y="8" width="304" height="224" rx="14"/></clipPath></defs>
+      <rect x="8" y="8" width="304" height="224" rx="14" fill="url(#mp)" stroke="#b6c2ce"/>
+      <g clip-path="url(#cp)">
+        <path d="M8 62H312M8 120H312M8 178H312M82 8V232M160 8V232M238 8V232" stroke="#fff" stroke-opacity=".7"/>
+        <text class="mk" x="160" y="146" text-anchor="middle">진명</text>
+        <rect class="beam" x="8" y="0" width="304" height="2"/>
+      </g>
+      <g fill="none" stroke="#9fadbb"><circle cx="26" cy="26" r="5"/><circle cx="294" cy="26" r="5"/><circle cx="26" cy="214" r="5"/><circle cx="294" cy="214" r="5"/></g>
+    </svg>
+  </div>
+</div>
+
+<div class="page" id="about">
+  <section>
+    <div class="w two">
+      <h2>인사말</h2>
+      <div>
+        <p>안녕하세요, 인천 주안동에서 레이저 마킹을 하는 진명레이져입니다.</p>
+        <p>저희는 제품의 품질을 좌우하는, 작지만 중요한 일을 담당하고 있습니다. 부품에 남는 글씨 하나, 로고 하나가 제품의 인상이 되고 신뢰가 된다는 것을 알기에 작은 표식도 가볍게 다루지 않습니다.</p>
+        <p>맡겨주신 부품이 의도하신 그대로 나올 수 있도록 최선을 다하겠습니다. 상담부터 출고까지 꼼꼼히 확인하며 함께하겠습니다.</p>
+        <p class="kind">처음 맡기시는 분도, 간단한 문의도 괜찮습니다. 궁금한 점은 언제든 친절히 응대해 드리겠습니다.</p>
+      </div>
+    </div>
+  </section>
+  <section class="soft">
+    <div class="w">
+      <p class="ln xl">진명이라는 이름에 진심을 담다.</p>
+      <p class="ln m">세상에는 수많은 이름이 있습니다. 하지만 모든 이름이 신뢰를 의미하지는 않습니다.</p>
+      <p class="ln m">우리는 이름이 단순히 누군가를 구분하기 위한 표시가 아니라, 그 사람이 지켜온 태도와 쌓아온 시간, 그리고 끝까지 책임지는 약속의 수단이라고 믿습니다.</p>
+      <p class="ln m">진명은 이름 앞에 부끄럽지 않기로 했습니다. 작은 약속 하나도 가볍게 여기지 않고, 눈앞의 이익보다 오래 지속될 가치를 생각하며, 말로 앞서기보다 행동으로 증명하겠습니다.</p>
+      <p class="ln l">빠르게 가는 것보다 바르게 가는 것.</p>
+      <p class="ln l">화려하게 보이는 것보다 본질에 충실한 것.</p>
+      <p class="ln l">한 번의 성과보다 오래 이어질 신뢰를 만드는 것.</p>
+      <p class="ln m">그것이 우리가 추구하는 기준입니다.</p>
+      <p class="ln l">진심으로 시작하고, 결과로써 증명하며, 신뢰로 기억되는 이름.</p>
+      <p class="ln xl">진명.</p>
+      <p class="ln m">시간이 지나도 선명히 새겨질 이름으로, 신뢰의 가치를 만들어갑니다.</p>
+    </div>
+  </section>
+  <section>
+    <div class="w">
+      <div class="row"><h3>레이저 마킹</h3><p>금속을 비롯한 다양한 부품 표면에 문자와 문양을 변형 없이 선명하게 마킹합니다.</p></div>
+      <div class="row"><h3>아노다이징·도장 제거</h3><p>아노다이징 처리면이나 도장면을 필요한 부분만 정밀하게 벗겨, 원하는 모양대로 소재면을 드러냅니다.</p></div>
+      <div class="row" style="border-bottom:1px solid var(--line)"><h3>글씨·문양·로고 마킹</h3><p>회사 로고, 제품명, 고유 문양까지 지워지지 않도록 선명하게 마킹합니다.</p></div>
+      <div class="area">금속 · 자동차 부품 · 전자 부품 · 휴대폰 부품<small>위 분야 외의 소재와 형태도 문의해 주시면, 상담과 샘플 테스트를 통해 가공 여부를 안내해 드립니다.</small></div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="project">
+  <section>
+    <div class="w">
+      <h2>작업은 이렇게 진행됩니다</h2>
+      <ol>
+        <li><svg class="pi" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8"/><path d="M18 24h14M18 30h14M18 36h8"/></svg><b>1. 상담·도면 확인</b><span>사이즈, 소재, 마킹 위치를 확인합니다.</span></li>
+        <li><svg class="pi" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4v20M18 18l6 6 6-6"/><rect x="8" y="30" width="32" height="11" rx="2"/><path d="M14 36h10"/></svg><b>2. 샘플 테스트</b><span>실제 소재에 시험 가공해 결과를 확인합니다.</span></li>
+        <li><svg class="pi" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 4h14v10l-4 5h-6l-4-5z"/><path d="M24 23v9"/><path d="M12 38h24M8 44h32"/></svg><b>3. 본 가공</b><span>확정된 조건으로 수량을 가공합니다.</span></li>
+        <li><svg class="pi" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 15L24 5l18 10v20L24 45 6 35z"/><path d="M6 15l18 10 18-10M24 25v20"/></svg><b>4. 검수·출고</b><span>선명도와 위치를 점검한 뒤 출고합니다.</span></li>
+      </ol>
+    </div>
+  </section>
+  <section class="soft">
+    <div class="w">
+      <h2>진행한 프로젝트</h2>
+      <div class="rail" id="rail" tabindex="0">
+        <div class="card"><div class="ph"><b>금속 부품</b>작업 사진 준비 중</div><span>금속 부품</span></div>
+        <div class="card"><div class="ph"><b>자동차 부품</b>작업 사진 준비 중</div><span>자동차 부품</span></div>
+        <div class="card"><div class="ph"><b>전자 부품</b>작업 사진 준비 중</div><span>전자 부품</span></div>
+        <div class="card"><div class="ph"><b>핸드폰 부품</b>작업 사진 준비 중</div><span>핸드폰 부품</span></div>
+        <div class="card"><div class="ph"><b>아노다이징 제거</b>작업 사진 준비 중</div><span>아노다이징 제거</span></div>
+        <div class="card"><div class="ph"><b>도장 제거</b>작업 사진 준비 중</div><span>도장 제거</span></div>
+        <div class="card"><div class="ph"><b>로고 마킹</b>작업 사진 준비 중</div><span>로고 마킹</span></div>
+        <div class="card"><div class="ph"><b>문양 마킹</b>작업 사진 준비 중</div><span>문양 마킹</span></div>
+        </div>
+      <div class="rn"><button id="prev" aria-label="이전">&#8249;</button><button id="next" aria-label="다음">&#8250;</button></div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="equipment">
+  <section>
+    <div class="w two">
+      <h2>장비 소개</h2>
+      <div>
+        <div class="eq">Datalogic<small>모델 703811210 · 다이오드 방식 파이버 레이저</small></div>
+        <p style="margin-top:28px">다이오드 방식의 파이버 레이저로 더 섬세한 작업이 가능합니다. 작은 글씨와 얇은 선, 정교한 로고까지 또렷하게 마킹하고, 아노다이징·도장 제거도 세밀하게 조절합니다.</p>
+        <div class="dx">
+          <h3>다이오드 방식 파이버 레이저란?</h3>
+          <p>레이저 다이오드(반도체 광원)가 만든 빛을 광섬유에 주입해 레이저를 만드는 방식입니다. 빛이 광섬유 안에서 증폭되어 나오기 때문에 빔이 매우 가늘고 고르게 모입니다.</p>
+          <p>빔이 가늘수록 더 작고 얇은 표식을 선명하게 남길 수 있고, 금속 표면의 처리층을 필요한 만큼만 벗겨내는 세밀한 조절도 가능합니다. 구조가 단순해 안정적이고 수명이 길다는 장점도 있습니다.</p>
+        </div>
+        <img class="eqimg" src="equipment.jpg" alt="Datalogic 레이저 마킹 장비" loading="lazy">
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="company">
+  <section>
+    <div class="w">
+      <h2>찾아오시는 길</h2>
+      <figure class="shot" style="margin-top:0"><img src="map.jpg" alt="진명레이져 위치 지도" loading="lazy"><i class="pin" style="left:56.7%;top:20.7%"></i><b class="tag" style="left:56.7%;top:20.7%">진명레이져</b></figure>
+      <div class="addr">인천 미추홀구 염전로 365, 2층 (주안동, 한국크라운 내)<br>
+        <a href="https://map.naver.com/p/search/인천 미추홀구 염전로 365" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+        <a href="https://maps.google.com/?q=인천 미추홀구 염전로 365" target="_blank" rel="noopener">구글 지도에서 보기</a>
+      </div>
+      <iframe class="map" style="margin-top:32px" title="진명레이져 위치" loading="lazy" src="https://maps.google.com/maps?q=인천+미추홀구+염전로+365&hl=ko&z=16&output=embed"></iframe>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="contact">
+  <section>
+    <div class="w">
+      <h2>문의</h2>
+      <p>소재와 사이즈, 마킹할 내용을 알려주시면 가능 여부와 진행 방법을 친절히 안내해 드립니다.</p>
+      <div class="cg" style="margin-top:36px">
+        <a class="cc" href="tel:01022927687"><svg class="pi" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 6h9l4 10-5 3a22 22 0 0 0 11 11l3-5 10 4v9a4 4 0 0 1-4 4C22 42 6 26 6 10a4 4 0 0 1 4-4z"/></svg><small>전화</small><b>010-2292-7687</b><em>눌러서 바로 통화</em></a>
+        <a class="cc" href="mailto:jmi1206@daum.net"><svg class="pi" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="10" width="40" height="28" rx="3"/><path d="M4 14l20 14 20-14"/></svg><small>이메일</small><b>jmi1206@daum.net</b><em>눌러서 메일 보내기</em></a>
+        <a class="cc" href="#company"><svg class="pi" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44S10 30 10 20a14 14 0 0 1 28 0c0 10-14 24-14 24z"/><circle cx="24" cy="20" r="5"/></svg><small>방문</small><b>인천 미추홀구 염전로 365</b><em>2층 (주안동, 한국크라운 내) · 지도 보기</em></a>
+      </div>
+      <div class="need">
+        <h3>문의하실 때 알려주시면 더 빠르게 안내드립니다</h3>
+        <ul><li>소재</li><li>사이즈</li><li>수량</li><li>마킹할 내용</li><li>도면 (있는 경우)</li></ul>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <b>진명레이져</b>
+  <span>인천 미추홀구 염전로 365, 2층 (주안동, 한국크라운 내)</span>
+  <span>Tel <a href="tel:01022927687">010-2292-7687</a></span>
+  <span>E-mail <a href="mailto:jmi1206@daum.net">jmi1206@daum.net</a></span>
+</footer>
+
+<script>
+try{
+var rail=document.getElementById('rail');
+if(rail){
+  document.getElementById('next').onclick=function(){rail.scrollBy({left:rail.clientWidth*.8,behavior:'smooth'})};
+  document.getElementById('prev').onclick=function(){rail.scrollBy({left:-rail.clientWidth*.8,behavior:'smooth'})};
+}
+var lines=document.querySelectorAll('.ln');
+lines.forEach(function(l){l.innerHTML=l.textContent.split(' ').map(function(w){return '<span class="w2">'+w+'</span>'}).join(' ')});
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on')})},{rootMargin:'0px 0px -35% 0px'});
+  lines.forEach(function(l){io.observe(l)});
+}else{lines.forEach(function(l){l.classList.add('on')})}
+window.addEventListener('hashchange',function(){lines.forEach(function(l){l.classList.remove('on')})});
+}catch(err){document.documentElement.className=""}
+</script>
+</body>
+</html>
